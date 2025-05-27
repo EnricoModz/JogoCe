@@ -35,7 +35,7 @@
 
   function tocarSom() {
     if (!dados || !dados.som) return;
-    const caminho = `../sons/${dados.som.toLowerCase()}.mp3`;
+    const caminho = `sons/${dados.som.toLowerCase()}.mp3`;
     const audio = new Audio(caminho);
     audio.play().catch(e => mostrarMensagem("Som não encontrado para este personagem."));
   }
