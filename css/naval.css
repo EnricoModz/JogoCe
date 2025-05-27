@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #5b9442;
+  background-image: url(../img/terra2.jpg);
+  color: var(--text-color);
+}
+
+h1 {
+  background-color: #3e7322;
+  padding: 20px;
+  border: 4px solid #2b4d14;
+  box-shadow: 4px 4px #1b3210;
+  color: #ffe600;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.container {
+  background-color: rgba(34, 34, 34, 0.8);
+  padding: 30px;
+  border: 4px solid #3d3d3d;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 600px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 20px #000;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #7ed957;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.info {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #f1fa8c;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 14px;
+  background: #444;
+  border: 2px solid #222;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.preenchimento {
+  width: 100%;
+  height: 100%;
+  background: #50fa7b;
+  transition: width 0.3s ease;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 64px);
+  gap: 4px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.celula {
+  width: 64px;
+  height: 64px;
+  background-image: url('/img/bloco.jfif');
+  background-size: cover;
+  border: 2px solid #555;
+  box-shadow: inset 0 0 4px #111;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.celula:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+.celula.acerto {
+  background-image: url('/img/acerto.png') no-repeat center/cover;
+  color: #fff;
+}
+
+.celula.erro {
+  background-image: url('/img/erro.jfif') no-repeat center/cover;
+  color: #fff;
+}
+
+#mensagem {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffb86c;
+  min-height: 70px; 
+  white-space: pre-line; 
+  max-width: 500px;
+}
+
+#reiniciar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 14px;
+  background-color: #6272a4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#reiniciar:hover {
+  background-color: #44475a;
+  transform: scale(1.05);
+}
+
+.icone {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+header {
+  width: 100%;
+  background-color: #3c6e3c;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #264d26;
+  box-shadow: 0 2px 10px #000;
+}
+
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  background-color: #5c913b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #2e582e;
+  transition: background-color 0.2s ease;
+}
+
+header nav a:hover {
+  background-color: #4c7a33;
+}
+
+footer {
+  width: 100%;
+  background-color: #3c6e3c;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  border-top: 4px solid #264d26;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 -2px 10px #000;
+}
+
+footer a {
+  color: #ffff88;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.botao-recomecar {
+  background-color: #5c913b;
+  border: 2px solid #2e582e;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 12px #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.botao-recomecar:hover {
+  background-color: #4c7a33;
+  transform: scale(1.05);
+}
+
+.posicionado {
+  outline: 3px solid #8bc34a;
+  outline-offset: -2px;
+  box-shadow: 0 0 8px #8bc34a;
+}

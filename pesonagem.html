@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleção de Personagem - Minecraft Style</title>
+  <link rel="stylesheet" href="css/personagem.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Escolha seu Personagem</h1>
+    <nav>
+        <a href="index.html">⬅ Voltar ao Início</a>
+    </nav>
+  </header>
+  <div class="main-container">
+    <div class="container-box">
+    <div class="character-select">
+      <div class="character" onclick="selectCharacter(this)" data-name="Steve" data-sound="Steve">
+        <img src="img/SteveC.png" alt="Steve">
+        <p>Steve</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Villager" data-sound="Villager">
+        <img src="img/villager.webp" alt="Alex">
+        <p>Villager</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Zumbi" data-sound="zumbi">
+        <img src="img/Zumb.png" alt="Zumbi">
+        <p>Zumbi</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Esqueleto" data-sound="esqueleto">
+        <img src="img/Esqueleto.webp" alt="Esqueleto">
+        <p>Esqueleto</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Wither Skeleton" data-sound="wither">
+        <img src="img/Wither_Skeleton.webp" alt="Whiter Skeleton">
+        <p>Witer Skeleton</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Creeper" data-sound="creeper">
+        <img src="img/creeperC.webp" alt="Creeper">
+        <p>Creeper</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Warden" data-sound="warden">
+        <img src="img/WardenC.webp" alt="Warden">
+        <p>Warden</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Enderman" data-sound="enderman">
+        <img src="img/enderman.webp" alt="Enderman">
+        <p>Enderman</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Zumbi Pigman" data-sound="Pigman">
+        <img src="img/Zombie_pigman.webp" alt="Zumbi Pigman">
+        <p>Zumbi Pigman</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Blaze" data-sound="blaze">
+        <img src="img/Blaze.webp" alt="Blaze">
+        <p>Blaze</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Piglin" data-sound="piglin">
+        <img src="img/Piglin.webp" alt="Piglin">
+        <p>Piglin</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Vaca" data-sound="vaca">
+        <img src="img/vaca.webp" alt="Vaca">
+        <p>Vaca</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Porco" data-sound="porco">
+        <img src="img/PorcoC.webp" alt="Porco">
+        <p>Porco</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Galinha" data-sound="galinha">
+        <img src="img/galinha.webp" alt="Galinha">
+        <p>Galinha</p>
+      </div>
+      <div class="character" onclick="selectCharacter(this)" data-name="Ovelha" data-sound="ovelha">
+        <img src="img/ovelha.png" alt="Ovelha">
+        <p>Ovelha</p>
+      </div>
+    </div>
+    
+    <div class="selected-info">
+      <h2>Selecionado:</h2>
+      <img id="selected-image" src="" alt="" style="display:none;">
+      <p id="selected-name">Nenhum</p>
+    </div>
+  </div>
+</div>
+  <footer>
+    <p>&copy; 2025 - Meu Site Minecraft | <a href="index.html">Página Principal</a></p>
+  </footer>
+
+  <script src="js/personagem.js"></script>
+
+</body>
+</html>

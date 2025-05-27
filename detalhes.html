@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Personagem</title>
+  <link rel="stylesheet" href="css/personagem.css">
+</head>
+<body>
+  <header>
+    <h1>Ficha do Personagem</h1>
+  </header>
+
+ <main class="personagem-detalhe">
+  <div class="ficha">
+    <h2 id="nome"></h2>
+    <img id="imagem" src="" alt="Imagem do personagem">
+    <pre id="descricao"></pre>
+    <button onclick="tocarSom()" class="botao-recomecar">🔊 Ouvir Som</button>
+    <button onclick="confirmarSelecionado()" class="botao-recomecar">✅ Selecionar Personagem</button>
+    <a href="pesonagem.html" class="botao-recomecar">⬅ Voltar à seleção</a>
+  </div>
+</main>
+
+<script>
+  const dados = JSON.parse(localStorage.getItem('personagemSelecionado'));
+
+  if (dados) {
+    document.getElementById('nome').textContent = dados.nome;
+    document.getElementById('imagem').src = dados.imagem;
+    document.getElementById('imagem').alt = dados.nome;
+    document.getElementById('descricao').textContent = dados.descricao;
+  } else {
+    document.getElementById('nome').textContent = "Nenhum personagem selecionado.";
+  }
+
+  function tocarSom() {
+    if (!dados || !dados.som) return;
+    const caminho = `../sons/${dados.som.toLowerCase()}.mp3`;
+    const audio = new Audio(caminho);
+    audio.play().catch(e => mostrarMensagem("Som não encontrado para este personagem."));
+  }
+
+  function mostrarMensagem(texto) {
+    const alerta = document.createElement("div");
+    alerta.className = "alerta-personalizado";
+    alerta.innerHTML = `
+      <div class="caixa-alerta">
+        <p>${texto}</p>
+        <button onclick="this.parentElement.parentElement.remove()">OK</button>
+      </div>
+    `;
+    document.body.appendChild(alerta);
+  }
+
+  function confirmarSelecionado() {
+    if (!dados) return;
+
+    const jogador1 = localStorage.getItem("personagemJogador1");
+    const jogador2 = localStorage.getItem("personagemJogador2");
+
+    if (jogador1 && jogador2) {
+      localStorage.removeItem("personagemJogador1");
+      localStorage.removeItem("personagemJogador2");
+    }
+
+    if (!localStorage.getItem("personagemJogador1")) {
+      localStorage.setItem("personagemJogador1", JSON.stringify(dados));
+      mostrarMensagem("Jogador 1 selecionado! Agora o Jogador 2 deve escolher.");
+      setTimeout(() => window.location.href = "pesonagem.html", 2500);
+    } else {
+      localStorage.setItem("personagemJogador2", JSON.stringify(dados));
+      mostrarMensagem("Jogador 2 selecionado! Escolha o jogo para começar.");
+      setTimeout(() => window.location.href = "index.html", 2500);
+    }
+  }
+</script>
+
+</body>
+</html>

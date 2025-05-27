@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #5b9442;
+  background: #5b9442;
+  background-image: url(../img/terra2.jpg);
+  text-align: center;
+  color: #fff;
+}
+
+
+h1 {
+  background-color: #3e7322;
+  padding: 20px;
+  border: 4px solid #2b4d14;
+  box-shadow: 4px 4px #1b3210;
+  color: #ffe600;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.character-select {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.character {
+  background-color: #d5c4a1;
+  border: 4px solid #3c3836;
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.character:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #3c3836;
+}
+
+.character.selected {
+  border-color: #689d6a;
+  background-color: #b8bb26;
+}
+
+.character img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.character p {
+  margin-top: auto;
+  font-size: 10px;
+  color: #3c3836;
+  text-align: center;
+}
+
+.selected-info {
+  background-color: #ebdbb2;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #3c3836;
+  font-size: 12px;
+  width: 350px;
+  min-height: 250px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 60px;
+  color: #111;
+  box-shadow: 4px 4px 10px #000;
+
+  /* 💡 Centralização vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.selected-info h2,
+.selected-info p {
+  color: #111; /* letras pretas */
+}
+
+.selected-info img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  margin-top: 10px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#titulo {
+  margin-right: 550px;
+}
+
+
+header {
+  width: 100%;
+  background-color: #3c6e3c;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #264d26;
+  box-shadow: 0 2px 10px #000;
+}
+
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  background-color: #5c913b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #2e582e;
+  transition: background-color 0.2s ease;
+}
+
+header nav a:hover {
+  background-color: #4c7a33;
+}
+
+footer {
+  width: 100%;
+  background-color: #3c6e3c;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  border-top: 4px solid #264d26;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 -2px 10px #000;
+}
+
+footer a {
+  color: #ffff88;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.container-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  border: 4px solid #2e2e2e;
+  flex-wrap: wrap;
+  align-items: center; /* 💡 alinha verticalmente ao centro */
+
+}
+
+
+@media (max-width: 1000px) {
+  .container-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selected-info {
+    margin-left: 0;
+    margin-top: 20px;
+    position: static;
+  }
+}
+
+/* parte dos detalhes dos mobs */
+
+pre {
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: 'Press Start 2P', cursive;
+  color: #3c3836;
+}
+
+.personagem-detalhe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.ficha {
+  background-color: #ebdbb2;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #3c3836;
+  font-size: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px #000;
+}
+
+.ficha img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+.ficha pre {
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: 'Press Start 2P', cursive;
+  color: #3c3836;
+  font-size: 10px;
+  line-height: 1.8; 
+}
+
+
+.botao-recomecar {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  background-color: #5c913b;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #2e582e;
+  transition: background-color 0.2s ease;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  margin: 6px 4px;
+  box-shadow: 2px 2px 5px #000;
+  text-align: center;
+}
+
+.botao-recomecar:hover {
+  background-color: #4c7a33;
+}
+
+ .alerta-personalizado {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .caixa-alerta {
+      background-color: #2d2d2d;
+      border: 3px solid #ffffff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .caixa-alerta button {
+      margin-top: 20px;
+      background-color: #ff4f5a;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }

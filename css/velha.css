@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #5b9442;
+  background-image: url(../img/terra2.jpg);
+  color: var(--text-color);
+}
+
+h1 {
+  background-color: #3e7322;
+  padding: 20px;
+  border: 4px solid #2b4d14;  
+  box-shadow: 4px 4px #1b3210;
+  color: #ffe600;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0;
+}
+.jogo {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 6px solid #2e582e;
+  box-shadow: 0 0 30px #1c1c1c;
+  background-color: #8ebf8e;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.linha {
+  display: flex;
+  flex: 1;
+}
+
+.casa {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #3a5e3a;
+  background-color: #b3d9b3;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.casa:hover {
+  background-color: #a3c9a3;
+}
+
+.casa img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  pointer-events: none;
+  margin: 5%;
+  image-rendering: pixelated;
+}
+
+#resultado {
+  margin: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #000;
+  width: 600px;
+  height: fit-content;
+}
+
+#jogoTodo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+#resposta {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffff00;
+  text-shadow: 2px 2px 6px #000;
+  margin-bottom: 20px;
+}
+
+.xis, .bola, .velha {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  margin: 10px 0;
+}
+
+.xis {
+  color: #00ff00;
+}
+
+.bola {
+  color: #3399ff;
+}
+
+.velha {
+  color: #ffffff;
+}
+
+input[type=button] {
+  background-color: #5c913b;
+  border: 2px solid #2e582e;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 12px 28px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 12px #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[type=button]:hover {
+  background-color: #4c7a33;
+  transform: scale(1.05);
+}
+
+main {
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 4px solid #3a5e3a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+header {
+  width: 100%;
+  background-color: #3c6e3c;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #264d26;
+  box-shadow: 0 2px 10px #000;
+}
+
+header {
+  width: 100%;
+  background-color: #3c6e3c;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #264d26;
+  box-shadow: 0 2px 10px #000;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  background-color: #5c913b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #2e582e;
+  transition: background-color 0.2s ease;
+}
+
+header nav a:hover {
+  background-color: #4c7a33;
+}
+
+footer {
+  width: 100%;
+  background-color: #3c6e3c;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  border-top: 4px solid #264d26;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 -2px 10px #000;
+}
+
+footer a {
+  color: #ffff88;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+footer a:hover {
+  color: #fff;
+}
